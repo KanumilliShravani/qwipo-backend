@@ -1,0 +1,59 @@
+GET http://localhost:5000/api/customers?search_q=
+###
+
+GET http://localhost:5000/api/customers
+###
+
+POST http://localhost:5000/api/customers
+Content-Type: application/json
+
+{
+    "firstName" : "Reynold",
+    "lastName"  : "Smith",
+    "phoneNumber" : "+919999000030"
+}
+###
+
+GET http://localhost:5000/api/customers/2
+###
+
+PUT http://localhost:5000/api/customers/7
+Content-Type: application/json
+
+{
+"firstName": "Ravi",
+"lastName": "Sharma",
+"phoneNumber": "+917893693972"
+}
+###
+
+DELETE  http://localhost:5000/api/customers/13
+###
+
+POST http://localhost:5000/api/customers/1/addresses
+Content-Type: application/json
+
+{   "customerId" : "6",
+    "addressDetails" : "Opp ravindra Appt",
+    "city"   : "Trivandram",
+    "state" : "Kerala",
+    "pinCode" : "300034"
+}
+###
+
+GET http://localhost:5000/api/customers/1/addresses
+###
+
+PUT http://localhost:5000/api/addresses/1/
+Content-Type: application/json 
+
+{
+ "addressDetails": "near Hanuman Temple",
+ "city" : "Pune",
+ "state" : "Mahrashtra",
+ "pinCode": "400034"
+}
+### 
+
+DELETE http://localhost:5000/api/addresses/5
+###
