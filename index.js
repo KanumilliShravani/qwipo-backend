@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 app.get('/api/customers', (req, res) => {
     const {search_q = ''} = req.query
     const sql = `SELECT * FROM customers
-    WHERE first_name LIKE '%${search_q}%`;
+    WHERE first_name LIKE '%${search_q}%'`;
     db.all(sql, [], (err, rows) => {
         if (err) {
             res.status(400).json({ "error": err.message });
